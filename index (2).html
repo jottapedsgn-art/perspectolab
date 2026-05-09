@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Perspecto — Em Breve</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; overflow: hidden; }
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Unbounded', sans-serif;
+    position: relative;
+    background: #d8d9dd;
+  }
+  .bg {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    background:
+      radial-gradient(ellipse 70% 55% at 8% 88%, rgba(1,226,225,0.35) 0%, transparent 52%),
+      radial-gradient(ellipse 55% 45% at 92% 12%, rgba(243,182,13,0.22) 0%, transparent 48%),
+      radial-gradient(ellipse 60% 55% at 78% 82%, rgba(87,205,153,0.25) 0%, transparent 50%),
+      radial-gradient(ellipse 45% 45% at 18% 18%, rgba(95,17,206,0.12) 0%, transparent 52%),
+      #d8d9dd;
+  }
+  .wrapper {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeUp 1.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .logo-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 120px;
+  }
+  .logo-wrap svg { width: 96px; height: auto; position: relative; z-index: 1; }
+  .label {
+    margin-top: 40px;
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: rgba(0,0,0,0.35);
+    animation: fadeUp 1.4s 0.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  .footer {
+    position: fixed;
+    bottom: 2.5rem;
+    left: 0; right: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    animation: fadeUp 1.4s 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  .footer a {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    color: rgba(0,0,0,0.3);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  .footer a:hover { color: rgba(1,160,160,0.9); }
+  .footer .copy {
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    color: rgba(0,0,0,0.18);
+    text-transform: uppercase;
+  }
+</style>
+</head>
+<body>
+<div class="bg"></div>
+<div class="wrapper">
+  <div class="logo-wrap">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 639.45 679.15">
+      <g fill="#0d0d0d">
+        <polygon points="10.38 631.99 16.85 631.99 16.85 650.11 21.26 650.11 21.26 631.99 27.71 631.99 27.71 628.3 10.38 628.3 10.38 631.99"/>
+        <polygon points="41.04 643.18 37.09 628.3 30.5 628.3 30.5 650.11 34.59 650.11 34.59 632.94 38.9 650.11 43.14 650.11 47.47 632.94 47.47 650.11 51.56 650.11 51.56 628.3 44.95 628.3 41.04 643.18"/>
+        <path d="M32.56,606.65c-17.98,0-32.56,14.58-32.56,32.56,0,17.98,14.58,32.56,32.56,32.56s32.56-14.58,32.56-32.56c0-17.98-14.58-32.56-32.56-32.56ZM32.56,668.41c-16.1,0-29.2-13.1-29.2-29.2,0-16.1,13.1-29.2,29.2-29.2,16.1,0,29.2,13.1,29.2,29.2,0,16.1-13.1,29.2-29.2,29.2Z"/>
+        <path d="M639.45,343.2l-86.43-86.43,51.99-51.99L401.86,1.64l-51.99,51.99L296.25,0,33.17,263.08l54.26,54.26L14.56,390.2l288.95,288.95,72.87-72.87h0s53.41,53.41,53.41,53.41l145.73-145.73-53.41-53.41,117.34-117.35ZM369.72,403.97l-22.8,3.92-.1,102.94-134.94.19-.63-234.18c-.18-75.78,52.7-135.92,125.68-141.53,72.23-5.55,136.43,46.92,144.91,118.98,8.39,71.23-40.15,137.32-112.11,149.69Z"/>
+      </g>
+    </svg>
+  </div>
+  <p class="label">Em breve</p>
+</div>
+<footer class="footer">
+  <a href="mailto:hello@perspecto.io">hello@perspecto.io</a>
+  <span class="copy">© 2025 Perspecto. Todos os direitos reservados.</span>
+</footer>
+</body>
+</html>
